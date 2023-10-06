@@ -1,4 +1,3 @@
-import React from 'react';
 import './button.css';
 
 interface ButtonProps {
@@ -36,6 +35,7 @@ export const Button = ({
 }: ButtonProps) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
+    <>
     <button
       type="button"
       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
@@ -48,5 +48,8 @@ export const Button = ({
         }
       `}</style>
     </button>
+
+    <div className="bg-red-400 dark:bg-blue-400">testing</div>
+    </>
   );
 };
