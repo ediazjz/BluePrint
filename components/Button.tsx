@@ -1,26 +1,26 @@
-import './button.css';
+import "./button.css"
 
 interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
-  primary?: boolean;
+  primary?: boolean
   /**
    * What background color to use
    */
-  backgroundColor?: string;
+  backgroundColor?: string
   /**
    * How large should the button be?
    */
-  size?: 'small' | 'medium' | 'large';
+  size?: "small" | "medium" | "large"
   /**
    * Button contents
    */
-  label: string;
+  label: string
   /**
    * Optional click handler
    */
-  onClick?: () => void;
+  onClick?: () => void
 }
 
 /**
@@ -28,28 +28,32 @@ interface ButtonProps {
  */
 export const Button = ({
   primary = false,
-  size = 'medium',
+  size = "medium",
   backgroundColor,
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const mode = primary
+    ? "storybook-button--primary"
+    : "storybook-button--secondary"
   return (
     <>
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      {...props}
-    >
-      {label}
-      <style jsx>{`
-        button {
-          background-color: ${backgroundColor};
-        }
-      `}</style>
-    </button>
+      <button
+        type="button"
+        className={["storybook-button", `storybook-button--${size}`, mode].join(
+          " "
+        )}
+        {...props}
+      >
+        {label}
+        <style jsx>{`
+          button {
+            background-color: ${backgroundColor};
+          }
+        `}</style>
+      </button>
 
-    <div className="bg-red-400 dark:bg-blue-400">testing</div>
+      <div className="bg-red-400 dark:bg-blue-400">testing</div>
     </>
-  );
-};
+  )
+}

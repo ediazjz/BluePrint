@@ -1,4 +1,4 @@
-import type { StorybookConfig } from "@storybook/nextjs";
+import type { StorybookConfig } from "@storybook/nextjs"
 
 const config: StorybookConfig = {
   stories: [
@@ -11,7 +11,7 @@ const config: StorybookConfig = {
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
     "@storybook/addon-themes",
-    "@storybook/themes"
+    "@storybook/themes",
   ],
   framework: {
     name: "@storybook/nextjs",
@@ -20,5 +20,5 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
-};
-export default config;
+}
+export default config
