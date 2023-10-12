@@ -1,6 +1,9 @@
+import * as React from "react"
+
 import { withThemeByClassName } from "@storybook/addon-themes"
 import type { Preview } from "@storybook/react"
 
+import { inter } from "../lib/fonts"
 import "../app/globals.css"
 
 const preview: Preview = {
@@ -22,6 +25,11 @@ const preview: Preview = {
       },
       defaultTheme: "light",
     }),
+    (Story) => (
+      <div className={`${inter.variable}`}>
+        <Story />
+      </div>
+    ),
   ],
 }
 

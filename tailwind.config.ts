@@ -55,9 +55,11 @@ const config: Config = {
           900: "#3B3939",
         },
       },
+      fontFamily: {
+        inter: ["var(--font-inter)"],
+      },
     },
   },
   plugins: [],
 }
-
 export default config
