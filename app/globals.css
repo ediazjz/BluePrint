@@ -15,6 +15,10 @@
     @apply font-inter text-sm font-normal leading-base xl:text-base xl:leading-lg;
   }
 
+  body {
+    @apply bg-base-light text-base-dark;
+  }
+
   .display,
   h1,
   .h1,
@@ -99,6 +103,36 @@
   quote,
   .quote {
     @apply italic;
+  }
+}
+
+@layer components {
+  .btn-primary-filled {
+    @apply focus:ring-primary-lighter border-primary bg-primary text-white hover:bg-primary-dark focus:bg-primary-darker focus:ring-2 focus:ring-offset-0;
+  }
+  .btn-primary-outlined {
+    @apply hover:bg-primary-lighter focus:ring-primary-lighter border-primary bg-transparent text-primary hover:border-primary-dark hover:text-primary-dark focus:border-primary-darker focus:bg-primary-light focus:text-primary-darker focus:ring-2  focus:ring-offset-0;
+  }
+  .btn-primary-ghost {
+    @apply focus:ring-primary-lighter hover:bg-primary-lighter border-transparent bg-transparent text-primary hover:text-primary-dark focus:bg-primary-light focus:text-primary-darker focus:ring-2 focus:ring-offset-0;
+  }
+  .btn-dark-filled {
+    @apply border-gray-800 bg-gray-800 text-white hover:bg-gray-900 focus:bg-base-dark focus:ring-2 focus:ring-gray-100 focus:ring-offset-0;
+  }
+  .btn-dark-outlined {
+    @apply border-gray-800 bg-transparent text-gray-800 hover:border-gray-900 hover:bg-gray-100 hover:text-gray-900 focus:border-base-dark focus:bg-gray-200 focus:text-base-dark focus:ring-2 focus:ring-gray-100  focus:ring-offset-0;
+  }
+  .btn-dark-ghost {
+    @apply border-transparent bg-transparent text-gray-800 hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-200 focus:text-base-dark focus:ring-2 focus:ring-gray-100 focus:ring-offset-0;
+  }
+  .btn-danger-filled {
+    @apply border-feedback-error bg-feedback-error text-white focus:ring-2 focus:ring-feedback-error-lighter focus:ring-offset-0;
+  }
+  .btn-danger-outlined {
+    @apply border-feedback-error bg-transparent text-feedback-error hover:bg-feedback-error-lighter focus:ring-2 focus:ring-feedback-error-lighter focus:ring-offset-0;
+  }
+  .btn-danger-ghost {
+    @apply border-transparent bg-transparent text-feedback-error hover:bg-feedback-error-lighter focus:ring-2 focus:ring-feedback-error-lighter focus:ring-offset-0;
   }
 }
 
