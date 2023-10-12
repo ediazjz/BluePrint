@@ -8,6 +8,14 @@ const config: Config = {
   ],
   darkMode: "class",
   theme: {
+    borderRadius: {
+      none: "0",
+      sm: "0.5rem",
+      DEFAULT: "0.75rem",
+      md: "1rem",
+      lg: "1.25rem",
+      full: "9999px",
+    },
     fontSize: {
       "2xs": "0.625rem !important",
       xs: "0.75rem !important",
