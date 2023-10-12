@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 500,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
 @layer base {
   * {
     @apply font-inter text-sm font-normal leading-base xl:text-base xl:leading-lg;
@@ -24,7 +32,7 @@
   }
 
   .display {
-    @apply text-12xl leading-none xl:text-13xl;
+    @apply leading-none text-12xl xl:text-13xl;
   }
 
   h1,
