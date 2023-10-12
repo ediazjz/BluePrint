@@ -4,27 +4,113 @@
 
 @layer base {
   * {
-    @apply font-inter;
+    @apply font-inter text-sm font-normal leading-base xl:text-base xl:leading-lg;
+  }
+
+  .display,
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    @apply font-bold;
+  }
+
+  .display {
+    @apply text-12xl leading-none xl:text-13xl;
+  }
+
+  h1,
+  .h1 {
+    @apply text-4xl leading-5xl xl:text-5xl xl:leading-6xl;
+  }
+
+  h2,
+  .h2 {
+    @apply text-3xl leading-4xl xl:text-4xl xl:leading-5xl;
+  }
+
+  h3,
+  .h3 {
+    @apply text-2xl leading-3xl xl:text-3xl xl:leading-4xl;
+  }
+
+  h4,
+  .h4 {
+    @apply text-xl leading-2xl xl:text-2xl xl:leading-3xl;
+  }
+
+  h5,
+  .h5 {
+    @apply text-lg leading-xl xl:text-xl xl:leading-2xl;
+  }
+
+  h6,
+  .h6 {
+    @apply text-base leading-lg xl:text-lg xl:leading-xl;
+  }
+
+  p,
+  .bodycopy {
+    @apply text-sm leading-lg xl:text-base xl:leading-xl;
+  }
+
+  .menu-item,
+  .small {
+    @apply text-xs leading-sm xl:text-sm xl:leading-base;
+  }
+
+  .mini {
+    @apply text-2xs leading-xs xl:text-xs xl:leading-sm;
+  }
+
+  label,
+  .label,
+  b,
+  .focus,
+  .menu-item {
+    @apply font-medium;
+  }
+
+  .small {
+    @apply font-light;
+  }
+
+  b,
+  .focus {
+    @apply tracking-[0.016em];
+  }
+
+  quote,
+  .quote {
+    @apply italic;
   }
 }
 
 @layer utilities {
   .gradient-diagonal {
-    @apply from-secondary to-primary bg-gradient-to-br from-[22.48%] to-[85.29%];
+    @apply bg-gradient-to-br from-secondary from-[22.48%] to-primary to-[85.29%];
   }
   .gradient-diagonal-inverted {
-    @apply from-secondary to-primary bg-gradient-to-tr from-[22.93%] to-[86.99%];
+    @apply bg-gradient-to-tr from-secondary from-[22.93%] to-primary to-[86.99%];
   }
   .gradient-horizontal {
-    @apply from-secondary to-primary bg-gradient-to-r from-[11.46%] to-[88.02%];
+    @apply bg-gradient-to-r from-secondary from-[11.46%] to-primary to-[88.02%];
   }
   .gradient-horizontal-inverted {
-    @apply from-secondary to-primary bg-gradient-to-l from-[11.46%] to-[88.02%];
+    @apply bg-gradient-to-l from-secondary from-[11.46%] to-primary to-[88.02%];
   }
   .gradient-vertical {
-    @apply from-secondary to-primary bg-gradient-to-b from-[11.46%] to-[88.02%];
+    @apply bg-gradient-to-b from-secondary from-[11.46%] to-primary to-[88.02%];
   }
   .gradient-vertical-inverted {
-    @apply from-secondary to-primary bg-gradient-to-t from-[11.46%] to-[88.02%];
+    @apply bg-gradient-to-t from-secondary from-[11.46%] to-primary to-[88.02%];
   }
 }
