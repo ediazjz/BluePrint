@@ -2,26 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  * {
+    @apply font-inter;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer utilities {
+  .gradient-diagonal {
+    @apply from-secondary to-primary bg-gradient-to-br from-[22.48%] to-[85.29%];
+  }
+  .gradient-diagonal-inverted {
+    @apply from-secondary to-primary bg-gradient-to-tr from-[22.93%] to-[86.99%];
+  }
+  .gradient-horizontal {
+    @apply from-secondary to-primary bg-gradient-to-r from-[11.46%] to-[88.02%];
+  }
+  .gradient-horizontal-inverted {
+    @apply from-secondary to-primary bg-gradient-to-l from-[11.46%] to-[88.02%];
+  }
+  .gradient-vertical {
+    @apply from-secondary to-primary bg-gradient-to-b from-[11.46%] to-[88.02%];
+  }
+  .gradient-vertical-inverted {
+    @apply from-secondary to-primary bg-gradient-to-t from-[11.46%] to-[88.02%];
+  }
 }
