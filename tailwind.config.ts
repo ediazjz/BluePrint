@@ -8,6 +8,9 @@ const config: Config = {
   ],
   darkMode: "class",
   theme: {
+    container: {
+      center: true,
+    },
     borderRadius: {
       none: "0",
       sm: "0.5rem",
