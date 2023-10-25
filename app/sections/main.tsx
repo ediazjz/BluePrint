@@ -4,7 +4,7 @@ import { StyledLink } from "@/components"
 
 export const Main = () => {
   return (
-    <main className="relative flex h-[75vh] min-h-[40rem] flex-col items-center justify-center px-4 md:px-16 md:text-center xl:px-32 2xl:px-48">
+    <main className="relative mb-16 flex h-[75vh] min-h-[40rem] flex-col items-center justify-center px-4 md:mb-20 md:px-16 md:text-center xl:mb-24 xl:px-32 2xl:px-48">
       <h1 className="display mb-8 w-full xl:mb-12">
         Discover <span className="display text-primary">Great</span>ness
         <br />

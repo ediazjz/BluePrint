@@ -1,5 +1,11 @@
-import { Main } from "./sections"
+import { Features, Main } from "./sections"
 
 export default function Home() {
-  return <Main />
+  return (
+    <>
+      <Main />
+
+      <Features />
+    </>
+  )
 }
