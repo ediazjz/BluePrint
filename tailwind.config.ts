@@ -37,6 +37,7 @@ const config: Config = {
       "13xl": "4.5rem !important",
     },
     lineHeight: {
+      none: "1",
       "2xs": "0.625rem",
       xs: "0.75rem",
       sm: "0.875rem",
