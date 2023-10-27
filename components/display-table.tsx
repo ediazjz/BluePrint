@@ -86,12 +86,12 @@ const columns = [
     id: "Feature",
     header: () => <span className="sr-only">Feature</span>,
     cell: (info) => (
-      <td className="focus w-60 text-left xl:w-80">
+      <span className="focus w-60 text-left xl:w-80">
         {info
           .getValue()
           .replace(/([a-z])([A-Z])/g, "$1 $2")
           .replace(/^./, (str) => str.toUpperCase())}
-      </td>
+      </span>
     ),
   }),
   columnHelper.accessor((row) => row.package1, {
