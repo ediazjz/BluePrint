@@ -1,4 +1,4 @@
-import { Features, Main } from "./sections"
+import { Features, Main, Pricing } from "./sections"
 
 export default function Home() {
   return (
@@ -6,6 +6,8 @@ export default function Home() {
       <Main />
 
       <Features />
+
+      <Pricing />
     </>
   )
 }
