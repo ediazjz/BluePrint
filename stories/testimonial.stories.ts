@@ -16,10 +16,11 @@ type Story = StoryObj<typeof meta>
 
 export const Big: Story = {
   args: {
-    imageUrl: "/placeholder.png",
+    imageUrl: "../demo.png",
     name: "John doe",
     title: "CEO",
-    companyLogoUrl: "/placeholder.png",
+    companyLogoUrl: "../logo.png",
     testimonial: "Lorem ipsum ",
+    userType: "customer",
   },
 }

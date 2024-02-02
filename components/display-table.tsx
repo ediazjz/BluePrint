@@ -154,7 +154,7 @@ export const DisplayTable = () => {
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
               {headerGroup.headers.map((header) => (
-                <th key={header.id} className="menu-item p-4 text-primary">
+                <th key={header.id} className="menu-item p-4 text-secondary">
                   {header.isPlaceholder
                     ? null
                     : flexRender(

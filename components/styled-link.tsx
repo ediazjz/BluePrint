@@ -47,7 +47,7 @@ export const StyledLink = ({
   )
 
   const buttonClass = twMerge(
-    "inline-flex items-center justify-center space-x-2 rounded-sm border py-2 text-center transition duration-300 ease-linear disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 xl:py-[9px]",
+    "inline-flex items-center justify-center space-x-2 rounded-full border py-2 text-center transition duration-300 ease-linear disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 xl:py-[9px]",
     styling,
     icon ? "pl-4 pr-6 xl:pl-6 xl:pr-7" : "px-5 xl:px-7",
     className
