@@ -1,3 +1,7 @@
 export default function Home() {
-  return <>This is the running server</>
+  return (
+    <div>
+      <h1>Home </h1>
+    </div>
+  )
 }

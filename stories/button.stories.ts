@@ -1,18 +1,26 @@
 // Import types
 import type { Meta, StoryObj } from "@storybook/react"
 
-// Import your component
-import { Button } from "../components/button"
+import { action } from "@storybook/addon-actions"
 
-// Declare metada of the Story
+// Import your component
+import { Button } from "../components"
+
+// Declare metadata of the Story
 const meta = {
   // Use / to group Stories, for example using Atomic Design
   title: "Atoms/Button",
   component: Button,
   // Sets how your component will be rendered in Storybook
+  // Meta-level parameters
   parameters: {
     layout: "centered",
   },
+  // argTypes: {
+  //   colorStyle: {
+  //     control: { type: "radio" },
+  //   },
+  // },
   // Always add the autodocs tag, unless you write your own documentation
   tags: ["autodocs"],
 } satisfies Meta<typeof Button>
@@ -24,18 +32,26 @@ type TStory = StoryObj<typeof meta>
 export const Primary: TStory = {
   // You can pass data to your props using args
   args: {
-    type: "button",
-    text: "This is a button",
-    icon: "clear_day",
-    styling: "btn-primary-filled",
-    onClick: () => console.log("This button is primary"),
+    isDisabled: false,
+    text: "This is a test",
+    colorStyle: "btn-primary-filled",
+    onClick: () => console.log("Button clicked"),
   },
+  // Story-level parameters
+  // parameters: {
+  //   backgrounds: {
+  //     default: "dark",
+  //   },
+  // },
 }
 
-// If you are using React to build your component, you can use the render functions
 export const Accent: TStory = {
-  render: () => <Button type="button" text="Another example" icon="clear_day" styling="btn-primary-filled" />,
-};
+  args: {
+    isDisabled: true,
+    text: "This is the power of Storybook",
+    colorStyle: "btn-primary-outlined",
+  },
+}
 
 // Export as default the meta object
 export default meta
