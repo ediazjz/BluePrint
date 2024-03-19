@@ -6,6 +6,19 @@
   @apply font-inter;
 }
 
+main section {
+  width: 100%;
+  height: 8rem;
+}
+
+.a {
+  background-color: red;
+}
+.b {
+  background-color: blue;
+}
+
+@layer base {
 /* Semantic Typography */
 body {
   @apply text-sm font-normal leading-base xl:text-base xl:leading-md;
@@ -74,18 +87,10 @@ q,
 .quote {
   @apply italic;
 }
+};
 
 @layer components {
-  .btn-primary-filled {
-    @apply border border-transparent bg-primary text-base-light hover:bg-primary-dark focus:bg-primary-darker;
-  }
-  .btn-primary-outlined {
-    @apply border border-primary bg-transparent text-primary hover:bg-primary-lighter hover:text-primary-dark focus:bg-primary-light focus:text-primary-darker;
-  }
-  .btn-primary-ghost {
-    @apply border border-transparent bg-transparent text-primary hover:bg-primary-lighter hover:text-primary-dark focus:bg-primary-light focus:text-primary-darker;
-  }
-  .btn-accent-filled {
+  /* .btn-accent-filled {
     @apply border border-transparent bg-accent text-base-light hover:bg-accent-dark focus:bg-accent-darker;
   }
   .btn-accent-outlined {
@@ -103,5 +108,11 @@ q,
   }
   .btn-dark-ghost {
     @apply border border-transparent text-gray-800 hover:bg-gray-50 hover:text-gray-900 focus:bg-gray-100 focus:text-base-dark;
+  } */
+}
+
+@layer utilities {
+  .btn-accent-filled {
+    @apply border border-transparent bg-accent text-base-light hover:bg-accent-dark focus:bg-accent-darker;
   }
 }

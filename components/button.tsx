@@ -1,3 +1,7 @@
+"use client"
+
+import { twMerge } from "tailwind-merge"
+
 type TButton = {
   isDisabled?: boolean
   text: string
@@ -12,13 +16,24 @@ type TButton = {
     | "btn-dark-outlined"
     | "btn-dark-ghost"
   onClick?: () => void
+  className?: string
 }
 
-export const Button = ({ isDisabled, text, colorStyle, onClick }: TButton) => {
+export const Button = ({
+  isDisabled,
+  text,
+  colorStyle,
+  onClick,
+  className,
+}: TButton) => {
   return (
     <button
       type="button"
-      className={`disabled:hover:bg-primary flex rounded-lg px-5 py-2 transition-all duration-300 ease-in-out disabled:cursor-not-allowed disabled:opacity-50 xl:px-7 xl:py-[10px] ${colorStyle}`}
+      className={twMerge(
+        "flex rounded-lg px-5 py-2 transition-all duration-300 ease-in-out disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-primary sm:px-9 xl:px-7 xl:py-[10px]",
+        colorStyle,
+        className
+      )}
       disabled={isDisabled}
       onClick={() => onClick && onClick()}
     >
