@@ -13,6 +13,7 @@ const config: StorybookConfig = {
     "@storybook/addon-themes",
     "@storybook/themes",
     "@storybook/addon-actions",
+    "@storybook/addon-mdx-gfm"
   ],
   framework: {
     name: "@storybook/nextjs",
