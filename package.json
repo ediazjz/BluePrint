@@ -1,47 +1,21 @@
 {
   "name": "blueprint",
+  "description": "A fully customizable, accesible, mobile-first UI library for React.",
+  "author": "ediazjz",
+  "license": "MIT",
   "version": "0.1.0",
-  "private": true,
+  "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
-  },
-  "dependencies": {
-    "@headlessui/react": "^1.7.18",
-    "@heroicons/react": "^2.1.1",
-    "next": "13.5.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tailwind-merge": "1.14.0",
-    "zustand": "4.5.1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build && tsc"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "8.0.0",
-    "@storybook/addon-essentials": "8.0.0",
-    "@storybook/addon-interactions": "8.0.0",
-    "@storybook/addon-links": "8.0.0",
-    "@storybook/addon-mdx-gfm": "8.0.0",
-    "@storybook/addon-onboarding": "8.0.0",
-    "@storybook/addon-themes": "8.0.0",
-    "@storybook/blocks": "8.0.0",
-    "@storybook/nextjs": "8.0.0",
-    "@storybook/react": "8.0.0",
-    "@types/node": "20.8.4",
-    "@types/react": "18.2.28",
-    "@types/react-dom": "18.2.13",
-    "autoprefixer": "10.4.16",
-    "eslint": "8.51.0",
-    "eslint-config-next": "13.5.4",
-    "eslint-plugin-storybook": "0.8.0",
-    "postcss": "8.4.31",
-    "prettier": "3.0.3",
-    "prettier-plugin-tailwindcss": "0.5.5",
-    "storybook": "8.0.0",
-    "tailwindcss": "3.3.3",
-    "typescript": "5.2.2"
+    "@types/react": "^18.2.67",
+    "react": "^18.2.0",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.6"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2"
   }
 }
