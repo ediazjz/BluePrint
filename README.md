@@ -14,5 +14,5 @@ Welcome to BluePrint, a React-based UI library designed to empower developers wi
 You can install BluePrint via npm:
 
 ```bash
-npm install blueprint
+npm install @ediazjz/blueprint
 ```
