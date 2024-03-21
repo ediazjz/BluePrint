@@ -4,10 +4,10 @@ Welcome to BluePrint, a React-based UI library designed to empower developers wi
 
 ## Features
 
-- **Customizable Components:** Tailor each component to fit your project's design requirements with ease.
-- **Modular Design:** Import only the components you need, keeping your project lightweight.
-- **Accessibility First:** Built with accessibility in mind, ensuring your applications are usable by everyone.
-- **Responsive Design:** Our components are designed to look great on any screen size.
+- [WIP] **Accessibility First:** Built with accessibility in mind, ensuring your applications are usable by everyone.
+- [WIP] **Responsive Design:** Our components are designed to look great on any screen size.
+- [TO DO] **Customizable Components:** Tailor each component to fit your project's design requirements with ease.
+- [TO DO] **Modular Design:** Import only the components you need, keeping your project lightweight.
 
 ## Installation
 
