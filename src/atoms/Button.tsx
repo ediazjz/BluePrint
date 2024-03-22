@@ -32,7 +32,7 @@ export default function Button({label, size, style, color, type, onClick, isDisa
         BUTTON_SIZES[size],
         BUTTON_COLORS[color],
         style && BUTTON_STYLES[style],
-        "rounded-lg hover:shadow-lg font-satoshi ring-0 disabled:opacity-50 disabled:cursor-not-allowed flex space-x-2 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-accent-dark focus:ring-opacity-50 active:shadow-inner active:ring-2 active:ring-accent-darker active:ring-opacity-50"
+        "rounded-lg hover:shadow-lg text-center justify-center font-satoshi ring-0 disabled:opacity-50 disabled:cursor-not-allowed flex space-x-2 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-accent-dark focus:ring-opacity-50 active:shadow-inner active:ring-2 active:ring-accent-darker active:ring-opacity-50"
         )
       }
       type={type}
