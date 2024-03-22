@@ -1,10 +1,42 @@
+import join from "../lib/joinClasses";
+
 export type TButton = {
   label?: string;
+  type: "button" | "submit" | "reset";
+  size: "small" | "DEFAULT" | "big";
+  color: "accent" | "dark" | "error";
+  style?: "outlined" | "ghost";
+  isDisabled?: boolean;
 }
 
-export default function Button({label}: TButton) {
+const BUTTON_SIZES = {
+  small: "px-3 py-[0.313rem] lg:px-4 py-2",
+  DEFAULT: "px-4 py-[0.563rem] lg:px-5 py-3",
+  big: "px-6 py-[0.813rem] lg:px-7 py-4",
+}
+const BUTTON_COLORS = {
+  accent: "bg-accent text-light border-accent hover:bg-accent-dark hover:border-accent-dark active:bg-accent-darker active:border-accent-darker",
+  dark: "bg-gray-700 text-light border-gray-700 hover:bg-gray-900 hover:border-gray-900 active:bg-dark active:border-dark",
+  error: "bg-feedback-error text-light border-feedback-error",
+}
+const BUTTON_STYLES = {
+  outlined: "px-4 py-[0.563rem] lg:px-5 py-3",
+  ghost: "px-6 py-[0.813rem] lg:px-7 py-4",
+}
+
+export default function Button({label, size, style, color, type, isDisabled = false}: TButton) {
   return (
-    <button className="bg-blue-400 btn">
+    <button
+      className={join(
+        BUTTON_SIZES[size],
+        BUTTON_COLORS[color],
+        style && BUTTON_STYLES[style],
+        "rounded-lg hover:shadow-lg font-satoshi ring-0 disabled:opacity-50 disabled:cursor-not-allowed flex space-x-2 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-accent-dark focus:ring-opacity-50 active:shadow-inner active:ring-2 active:ring-accent-darker active:ring-opacity-50"
+        )
+      }
+      type={type}
+      disabled={isDisabled}
+    >
       {label}
     </button>
   )

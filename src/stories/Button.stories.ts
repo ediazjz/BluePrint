@@ -14,8 +14,28 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Primary: Story = {
+export const Accent: Story = {
   args: {
-    label: "Button",
+    label: "Accent button",
+    size: "DEFAULT",
+    type: "button",
+    color: "accent",
   },
 }
+export const Dark: Story = {
+  args: {
+    label: "Dark button",
+    size: "DEFAULT",
+    type: "button",
+    color: "dark",
+  },
+}
+export const Error: Story = {
+  args: {
+    label: "Error button",
+    size: "DEFAULT",
+    type: "button",
+    color: "error",
+  },
+}
+
