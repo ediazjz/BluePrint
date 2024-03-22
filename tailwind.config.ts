@@ -3,7 +3,7 @@ module.exports = {
   content: ["./src/**/*.{html,js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      'satoshi': ['Satoshi', 'system-ui',],
+      satoshi: ["Satoshi", "system-ui"],
     },
     fontSize: {
       "2xs": ".625rem",
@@ -71,7 +71,7 @@ module.exports = {
       "84": "21rem",
       "88": "22rem",
       "92": "23rem",
-      "96": "24rem"
+      "96": "24rem",
     },
     extend: {
       colors: {
@@ -92,20 +92,20 @@ module.exports = {
         feedback: {
           success: {
             DEFAULT: "#115918",
-            lighter: "#D8F8DC"
+            lighter: "#D8F8DC",
           },
           warning: {
             DEFAULT: "#F5A164",
-            lighter: "#FFE7D6"
+            lighter: "#FFE7D6",
           },
           error: {
             DEFAULT: "#A00D0D",
-            lighter: "#FDECEC"
+            lighter: "#FDECEC",
           },
         },
         light: "#FBFBFB",
-        dark: "#2C2C2C"
-      }
+        dark: "#2C2C2C",
+      },
     },
     lineHeight: {
       none: "1",
@@ -129,5 +129,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
-
+};

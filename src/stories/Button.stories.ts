@@ -1,8 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { userEvent, within } from '@storybook/test';
+import type { Meta, StoryObj } from "@storybook/react";
+import { userEvent, within } from "@storybook/test";
 
-
-import { Button } from '../atoms';
+import { Button } from "../atoms";
 
 const meta = {
   title: "Atoms/Button",
@@ -11,26 +10,26 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof Button>
+} satisfies Meta<typeof Button>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Accent: Story = {
   // This is a test to check if the button is clickable
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
-    await userEvent.click(canvas.getByRole('button'));
+    await userEvent.click(canvas.getByRole("button"));
   },
-  
+
   args: {
     label: "Accent button",
     size: "DEFAULT",
     type: "button",
     color: "accent",
   },
-}
+};
 export const Dark: Story = {
   args: {
     label: "Dark button",
@@ -38,7 +37,7 @@ export const Dark: Story = {
     type: "button",
     color: "dark",
   },
-}
+};
 export const Error: Story = {
   args: {
     label: "Error button",
@@ -46,5 +45,4 @@ export const Error: Story = {
     type: "button",
     color: "error",
   },
-}
-
+};

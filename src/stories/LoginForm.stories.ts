@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { userEvent, waitFor, within, expect, fn } from '@storybook/test';
+import type { Meta, StoryObj } from "@storybook/react";
+import { userEvent, waitFor, within, expect, fn } from "@storybook/test";
 
-import { LoginForm } from '../organisms';
+import { LoginForm } from "../organisms";
 
 const meta = {
   title: "Organisms/LoginForm",
@@ -12,30 +12,36 @@ const meta = {
   tags: ["autodocs"],
   args: {
     onSubmit: fn(),
-  }
-} satisfies Meta<typeof LoginForm>
+  },
+} satisfies Meta<typeof LoginForm>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const EmptyForm: Story = {
   args: {},
-}
+};
 
 export const FilledForm: Story = {
   play: async ({ args, canvasElement, step }) => {
     const canvas = within(canvasElement);
 
-    await step('Enter email and password', async () => {
-      await userEvent.type(canvas.getByPlaceholderText('email'), 'hi@example.com');
-      await userEvent.type(canvas.getByPlaceholderText('password'), 'supersecret');
+    await step("Enter email and password", async () => {
+      await userEvent.type(
+        canvas.getByPlaceholderText("email"),
+        "hi@example.com"
+      );
+      await userEvent.type(
+        canvas.getByPlaceholderText("password"),
+        "supersecret"
+      );
     });
 
-    await step('Submit form', async () => {
-      await userEvent.click(canvas.getByRole('button'));
+    await step("Submit form", async () => {
+      await userEvent.click(canvas.getByRole("button"));
     });
 
     await waitFor(() => expect(args.onSubmit).toHaveBeenCalled());
   },
   args: {},
-}
+};
