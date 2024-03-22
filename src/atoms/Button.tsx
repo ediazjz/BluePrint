@@ -4,7 +4,7 @@ export type TButton = {
 
 export default function Button({label}: TButton) {
   return (
-    <button className="button">
+    <button className="bg-blue-400 btn">
       {label}
     </button>
   )
