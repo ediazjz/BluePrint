@@ -26,7 +26,7 @@ export const FilledForm: Story = {
   play: async ({ args, canvasElement, step }) => {
     const canvas = within(canvasElement);
 
-    await step("Enter email and password", async () => {
+    await step("Input", async () => {
       await userEvent.type(
         canvas.getByPlaceholderText("email"),
         "hi@example.com"
@@ -41,7 +41,11 @@ export const FilledForm: Story = {
       await userEvent.click(canvas.getByRole("button"));
     });
 
-    await waitFor(() => expect(args.onSubmit).toHaveBeenCalled());
+    await step("Validate execution and feedback", async () => {
+      await waitFor(() => expect(args.onSubmit).toHaveBeenCalled());
+
+      await expect(canvas.getByText("You are logged in!")).toBeInTheDocument();
+    });
   },
   args: {},
 };
