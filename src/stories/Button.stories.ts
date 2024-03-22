@@ -1,4 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { userEvent, within } from '@storybook/test';
+
 
 import { Button } from '../atoms';
 
@@ -15,6 +17,13 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Accent: Story = {
+  // This is a test to check if the button is clickable
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    await userEvent.click(canvas.getByRole('button'));
+  },
+  
   args: {
     label: "Accent button",
     size: "DEFAULT",

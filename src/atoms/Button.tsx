@@ -7,6 +7,7 @@ export type TButton = {
   color: "accent" | "dark" | "error";
   style?: "outlined" | "ghost";
   isDisabled?: boolean;
+  onClick?: () => void;
 }
 
 const BUTTON_SIZES = {
@@ -24,7 +25,7 @@ const BUTTON_STYLES = {
   ghost: "px-6 py-[0.813rem] lg:px-7 py-4",
 }
 
-export default function Button({label, size, style, color, type, isDisabled = false}: TButton) {
+export default function Button({label, size, style, color, type, onClick, isDisabled = false}: TButton) {
   return (
     <button
       className={join(
@@ -36,6 +37,7 @@ export default function Button({label, size, style, color, type, isDisabled = fa
       }
       type={type}
       disabled={isDisabled}
+      onClick={onClick}
     >
       {label}
     </button>
