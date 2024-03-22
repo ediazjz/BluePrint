@@ -1,3 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Satoshi';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local('/assets/fonts/Satoshi-Light.woff') format('woff'),
+    local('/assets/fonts/Satoshi-Light.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Satoshi';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local('/assets/fonts/Satoshi-LightItalic.woff') format('woff'),
+    local('/assets/fonts/Satoshi-LightItalic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Satoshi';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local('/assets/fonts/Satoshi-Regular.woff') format('woff'),
+    local('/assets/fonts/Satoshi-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Satoshi';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local('/assets/fonts/Satoshi-Italic.woff') format('woff'),
+    local('/assets/fonts/Satoshi-Italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Satoshi';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local('/assets/fonts/Satoshi-Medium.woff') format('woff'),
+    local('/assets/fonts/Satoshi-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Satoshi';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local('/assets/fonts/Satoshi-MediumItalic.woff') format('woff'),
+    local('/assets/fonts/Satoshi-MediumItalic.woff2') format('woff2');
+}
